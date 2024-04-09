@@ -29,5 +29,6 @@ jobs:
           cd mazegroup
           python -m build
           ls
+          cd ../
       - name: Publish package distributions to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
