@@ -1,6 +1,7 @@
 import mazegroup.utils as utils
 import pickle
 import os
+import copy
 
 COMMANDS = {}
 
@@ -105,7 +106,7 @@ class Args():
 
 class Command():
     def __init__(self, name:str=None, function=utils.Void, args:Args=Args(), unique:bool=True) -> None:
-        self.function = function
+        self.function = copy.deepcopy(function)
         if not name:
             name = f'{function=}'.split('=')[0].strip().lower()
         self.name = name
@@ -113,13 +114,14 @@ class Command():
         self.unique = unique
 
     def register(self):
-        loadPickleVar()
+        #loadPickleVar()
         if self.name in COMMANDS.keys():
             return utils.Error(f"A command was already registered at the name '{self.name}'")
+        self_copy = copy.deepcopy(self)
         COMMANDS[self.name] = {
-            "function": self.function,
-            "args": self.args,
-            "class" : self
+            "function": self_copy.function,
+            "args": self_copy.args,
+            "class" : self_copy
         }
         savePickleVar()
         return utils.NoError()

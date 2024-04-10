@@ -1,4 +1,6 @@
 import sys
+import mazegroup.imports as imports
+imports.importMGPackages()
 import mazegroup.commands as commands
 import mazegroup.utils as utils
 
