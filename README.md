@@ -15,14 +15,15 @@ MazeGroup.py can be imported or can be executed with the CLI command (`mazegroup
 
 ### With command :
 
-The CLI command usage : `mazegroup <command> <args>`
+The CLI command usage : `mazegroup <command> <args>`.
+
 All commands are registered at the initialization.
 
 For exemple `mazegroup echo Hello, world!` will prints `Hello, world!`.
 
 ### With importation :
 
-For import MazeGroup.py in this Python source code (essential to start):
+For import MazeGroup.py in this Python source code (essential to start) :
 ```py
 import mazegroup as mg
 ```
@@ -33,7 +34,7 @@ import mazegroup.imports as imports
 imports.importMGPackages()
 ```
 
-For use a command in your source code (you must do the last step):
+For use a command in your source code (you must do the last step) :
 ```py
 import mazegroup.commands as commands
 import mazegroup.utils as utils  # For error checking
@@ -47,5 +48,5 @@ if type(returned) != utils.NoError:
 
 ## Commands available :
 
-- echo <...>
+- `echo <...>``
 	- Print the textes in arguments.
