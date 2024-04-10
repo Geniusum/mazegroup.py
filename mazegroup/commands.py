@@ -41,7 +41,7 @@ class Arg():
         py_eval_prefix = "py:"
         if value.lower().startswith(py_eval_prefix):
             try:
-                r = eval(value)
+                r = eval(value[len(py_eval_prefix):])
             except Exception as e:
                 return utils.Error(f"Python Eval Exception : {e}")
         return r
@@ -51,11 +51,11 @@ class Arg():
             return utils.Error("The value is required")
         elif not value:
             self.active_value = self.parse(self.default)
-            if type(self.active_value) == utils.Error():
+            if type(self.active_value) == utils.Error:
                 return self.active_value
         else:
             self.active_value = self.parse(value)
-            if type(self.active_value) == utils.Error():
+            if type(self.active_value) == utils.Error:
                 return self.active_value
         return utils.NoError()
     
@@ -138,12 +138,18 @@ class Command():
         r = self.args.tryArgs(args)
         if type(r) != utils.NoError:
             _ = self.args.getArgsNames(); __ = ""
-            for arg in _: __ += f"<{arg}>"
+            if not len(self.args.args_) < len(self.args.args):
+                for arg in _: __ += f"<{arg}>"
+            else:
+                __ = f"<...>"
             return utils.Error(f"{r.message}\nUsage : mazegroup {self.name} {__}")
-        if self.unique:
-            self.function(self.args.args)
-        else:
-            self.function(*self.args.args)
+        try:
+            if self.unique:
+                self.function(self.args.args)
+            else:
+                self.function(*self.args.args)
+        except Exception as e:
+            return utils.Error(f"Exception during the execution of the command '{self.name}' : {e}")
         return utils.NoError()
 
 def executeCommand(command:str, args:list):
