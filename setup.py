@@ -8,7 +8,7 @@ setup(
     description="MazeGroup.py is an general prupose library for Python.",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    author="Genius_um & Rayanis55",
+    author="Genius_um",
     python_requires=">=3.9",
     url="https://github.com/Geniusum/mazegroup.py",
     packages=["mazegroup", "mazegroup/cli"], # find_packages(),
