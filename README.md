@@ -43,8 +43,12 @@ returned = commands.executeCommand("echo", ["Hello,", "world!"])  # Echo "Hello,
 
 # If there is a error, shows it (optional) :
 if type(returned) != utils.NoError:
-	print("Error :", returned)
+	print("Error :", returned.message)
 ```
+
+### Arguments
+
+You can evaluate Python expression in using `py:` in the argument (only the actual argument will be evaluate), by example the argument `"py:5 + 5"` will returns 10, we use `"` because we also use spaces on the expression.
 
 ## Commands available :
 
