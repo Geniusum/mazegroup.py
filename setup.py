@@ -23,6 +23,7 @@ setup(
     },
     install_requires=[
         "cryptography",
-        "colorama"
+        "colorama",
+        "keyboard"
     ]
 )
