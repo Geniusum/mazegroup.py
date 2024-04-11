@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="mazegroup",
-    version="0.1.3.3",
+    version="0.1.4",
     description="MazeGroup.py is an general prupose library for Python.",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
@@ -22,6 +22,7 @@ setup(
         ]
     },
     install_requires=[
-        'cryptography'
+        "cryptography",
+        "colorama"
     ]
 )

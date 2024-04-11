@@ -62,3 +62,31 @@ You can evaluate Python expression in using `py:` in the argument (only the actu
 	- Execute the Python code in arguments.
 - `pyeval <...>`
 	- Evaluate the Python expression in arguments.
+- `calc <...>`
+	- Evaluate expression in arguments with the Shaft parser.
+- `cd <path>`
+	- Choose the working directory, work only on MazeGroup.py shell.
+- `exit <...>`
+	- Exit the program, for MazeGroup.py shell.
+- `quit <...>`
+	- Exit the program, for MazeGroup.py shell.
+- `pypkg <name> <options>`
+	- Make a Python package. Options :
+		- `-f` or `--full` for a full generation.
+		- `info:{'name': ...}` for set package informations (a python dictionnary), keys available :
+			- `name` -> `str`
+			- `description` -> `str`
+			- `author` -> `str`
+			- `license` -> `str`
+			- `url` -> `str`
+			- `date` -> `str`
+- `sc <...>`
+	- SC for Secure Compress, it's a encrypted compression who works with a password, a increment level and a tar level.
+	- Usage : `mazegroup sc <compress/decompress> <path> <!* output path> <!* password> <!* increments> <!* tar>`
+	- The default output is in the MazeGroup.py Python package directory, on the part of this command, either `mazegroup/sc/out`.
+- `shell <...>`
+	- The MazeGroup.py shell. There are modes available, use their start char for enter on it :
+		- The system shell mode : `§ <...>`
+		- The calc mode : `% <...>`, equivalant of the command `calc` but this mode lock the MazeGroup.py shell for expressions.
+	- Once you enter in a mode, the rest of commands of after will be locked on this mode, for return to the MazeGroup.py shell, you must enter a empty command.
+	- In command arguments (only on the MazeGroup.py shell), the `\s` will provoks a space.

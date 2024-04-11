@@ -14,7 +14,7 @@ class Command():
             command = command["class"]
             _ = command.args.getArgsNames(); __ = ""
             if not len(command.args.args_) == 0:
-                for arg in _: __ += f"<{arg}>"
+                for arg in _: __ += f"<{arg}> "
             else:
                 __ = f"<...>"
             cmd_str += f"\t{name} {__}\n"

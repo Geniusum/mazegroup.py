@@ -13,6 +13,6 @@ class Command():
         else:
             path = args[list(args.keys())[0]].active_value
         ls = "\n".join(os.listdir(path))
-        print(f"PWD : {path}\n{ls}")
+        print(f"Path : {path}\n{ls}")
             
 Command()

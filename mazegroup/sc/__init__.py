@@ -89,7 +89,8 @@ class MCP():
         f = open(msc, "w+")
         f.write(str(content_encrypted))
         f.close()
-        return content_encrypted
+        print(f"Secure compress : the path is '{msc}'")
+        #return content_encrypted
     
     def SCP_Decompress(self, path:str, output:str=None, password:str="", increment:int=0, tar:str=None):
         if not len(password):
@@ -140,6 +141,8 @@ class MCP():
             elif len(item) == 1:
                 dir_path = item[0]
                 os.makedirs(os.path.join(os.path.dirname(output), dir_path), exist_ok=True)
+
+        print(f"Secure compress : the path is '{os.path.dirname(output)}'")
 
         #shutil.move(rc_temp, output)  # Move the decrypted files to the specified output directory
 
