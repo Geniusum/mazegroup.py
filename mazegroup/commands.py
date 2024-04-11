@@ -70,9 +70,12 @@ class Args():
     def addArg(self, arg:Arg): self.args.append(arg)
 
     def tryArgs(self, args:list):
+        ag = []
+        for arg in self.args.values():
+            if arg.required: ag.append(arg)
         if len(args) > len(self.args) and not self.overflow:
             return utils.Error(f"Arguments overflow, {len(args)} was given but {len(self.args)} was waited")
-        elif len(args) < len(self.args):
+        elif len(args) < len(ag):
             return utils.Error(f"Missing arguments, {len(args)} was given but {len(self.args)} was waited")
         for arg_index, value in enumerate(args):
             if type(value) == dict:
@@ -138,7 +141,10 @@ class Command():
         r = self.args.tryArgs(args)
         if type(r) != utils.NoError:
             _ = self.args.getArgsNames(); __ = ""
-            if not len(self.args.args_) < len(self.args.args):
+            args_ = []
+            for arg in self.args.args_:
+                if arg.required: args_.append(arg)
+            if not len(args_) < len(self.args.args):
                 for arg in _: __ += f"<{arg}>"
             else:
                 __ = f"<...>"

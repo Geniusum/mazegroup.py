@@ -52,5 +52,13 @@ You can evaluate Python expression in using `py:` in the argument (only the actu
 
 ## Commands available :
 
-- `echo <...>``
+- `echo <...>`
 	- Print the textes in arguments.
+- `help <...>`
+	- Shows all commands available.
+- `ls <path>`
+	- Shows all directories and files from the selected path.
+- `pyexec <...>`
+	- Execute the Python code in arguments.
+- `pyeval <...>`
+	- Evaluate the Python expression in arguments.
