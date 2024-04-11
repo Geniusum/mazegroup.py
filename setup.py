@@ -20,5 +20,8 @@ setup(
             'mg = mazegroup.cli:main',
             'mazegroup = mazegroup.cli:main'
         ]
-    }
+    },
+    install_requires=[
+        'cryptography'
+    ]
 )

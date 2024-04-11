@@ -76,7 +76,7 @@ class Args():
         if len(args) > len(self.args) and not self.overflow:
             return utils.Error(f"Arguments overflow, {len(args)} was given but {len(self.args)} was waited")
         elif len(args) < len(ag):
-            return utils.Error(f"Missing arguments, {len(args)} was given but {len(self.args)} was waited")
+            return utils.Error(f"Missing arguments, {len(args)} was given but {len(ag)} was waited")
         for arg_index, value in enumerate(args):
             if type(value) == dict:
                 try:
