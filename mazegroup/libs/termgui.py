@@ -88,6 +88,7 @@ class TermGUI():
                         self.set_pixel(x1 + i, y1, back, fore, char)
     
     def loop(self):
+        self.fill_map(" ", Back.WHITE)
         while True:
             self.fill_map(" ", Back.WHITE)
             self.update_func()
