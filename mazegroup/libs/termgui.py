@@ -88,10 +88,7 @@ class TermGUI():
                         self.set_pixel(x1 + i, y1, back, fore, char)
     
     def loop(self):
-        import random as rd
         while True:
             self.fill_map(" ", Back.WHITE)
-            for i in range(rd.randint(1, 10)):
-                self.draw_line(rd.randint(0, self.width - 1), rd.randint(0, self.height - 1), rd.randint(0, self.width - 1), rd.randint(0, self.height - 1), rd.choice([Back.RED, Back.GREEN, Back.BLUE, Back.YELLOW]))
-
+            self.update_func()
             self.draw_map()
