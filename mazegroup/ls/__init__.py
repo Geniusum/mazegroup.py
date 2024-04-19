@@ -12,7 +12,11 @@ class Command():
             path = os.getcwd()
         else:
             path = args[list(args.keys())[0]].active_value
-        items = os.listdir(path).sort()
+        items = os.listdir(path)
+        items.sort()
+        for i, p in enumerate(items):
+            if os.path.isdir(os.path.abspath(p)):
+                items[i] += "/"
         ls = "\n".join(items)
         print(f"Path : {path}\n{ls}")
             
