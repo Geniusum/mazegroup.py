@@ -12,7 +12,8 @@ class Command():
             path = os.getcwd()
         else:
             path = args[list(args.keys())[0]].active_value
-        ls = "\n".join(os.listdir(path))
+        items = os.listdir(path).sort()
+        ls = "\n".join(items)
         print(f"Path : {path}\n{ls}")
             
 Command()
