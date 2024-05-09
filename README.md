@@ -41,7 +41,7 @@ import mazegroup.utils as utils  # For error checking
 
 returned = commands.executeCommand("echo", ["Hello,", "world!"])  # Echo "Hello, world!" by example
 
-# If there is a error, shows it (optional) :
+# If there is an error, shows it (optional) :
 if type(returned) != utils.NoError:
 	print("Error :", returned.message)
 ```
