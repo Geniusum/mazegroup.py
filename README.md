@@ -90,3 +90,5 @@ You can evaluate Python expression in using `py:` in the argument (only the actu
 		- The calc mode : `% <...>`, equivalant of the command `calc` but this mode lock the MazeGroup.py shell for expressions.
 	- Once you enter in a mode, the rest of commands of after will be locked on this mode, for return to the MazeGroup.py shell, you must enter a empty command.
 	- In command arguments (only on the MazeGroup.py shell), the `\s` will provoks a space.
+- `rud <sourcecode> <options>`
+	- RUD interpreter, a minimal stack-based programming language. No documentation available.
