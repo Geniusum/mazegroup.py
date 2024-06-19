@@ -98,3 +98,11 @@ You can evaluate Python expression in using `py:` in the argument (only the actu
 	- Show the credits and package informations, including the actual installed version.
 - `ver <...>`
 	- Show the credits and package informations, including the actual installed version.
+
+---
+
+# Bugs & knowed Issues
+
+> This section can be contributed by you in adding other bugs or issues. You can also try to fix these bugs & issues.
+
+- `update` command : The package uninstallation stop the command process.
