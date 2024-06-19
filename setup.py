@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="mazegroup",
-    version="0.1.4.1",
+    version="0.1.4.1.1",
     description="MazeGroup.py is an general prupose library for Python.",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
