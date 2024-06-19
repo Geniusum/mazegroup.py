@@ -92,3 +92,5 @@ You can evaluate Python expression in using `py:` in the argument (only the actu
 	- In command arguments (only on the MazeGroup.py shell), the `\s` will provoks a space.
 - `rud <sourcecode> <options>`
 	- RUD interpreter, a minimal stack-based programming language. No documentation available.
+- `update <...>`
+  	- Update MazeGroup.py package.
