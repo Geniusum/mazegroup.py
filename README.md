@@ -94,3 +94,7 @@ You can evaluate Python expression in using `py:` in the argument (only the actu
 	- RUD interpreter, a minimal stack-based programming language. No documentation available.
 - `update <...>`
   	- Update MazeGroup.py package.
+- `version <...>`
+	- Show the credits and package informations, including the actual installed version.
+- `ver <...>`
+	- Show the credits and package informations, including the actual installed version.
