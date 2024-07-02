@@ -99,6 +99,15 @@ You can evaluate Python expression in using `py:` in the argument (only the actu
 - `ver <...>`
 	- Show the credits and package informations, including the actual installed version.
 
+## Libraries
+
+Not documentation available for now.
+List of all libraries :
+- `nl/`  Natural Language
+- `jygo/` Jygo
+- `fluxes` Fluxes format parser
+- `termgui` Terminal GUI tests
+
 ---
 
 # Bugs & knowed Issues
