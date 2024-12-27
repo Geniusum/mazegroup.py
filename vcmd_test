@@ -1,0 +1,2 @@
+#!/bin/bash
+./venv/bin/python -m mazegroup.cli.__init__ %*
